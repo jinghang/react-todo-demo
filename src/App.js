@@ -60,7 +60,7 @@ class App extends Component {
     const { getFieldDecorator, getFieldsError, getFieldError, isFieldTouched } = this.props.form;
     return (
       <div className="App">
-        <div style={{ background: '#ECECEC', padding: '30px' }}>
+        <div style={{  padding: '30px' }}>
           <Row gutter={20}>
             <Col span="8">
               <Card title="TODO" bordered={true}>
