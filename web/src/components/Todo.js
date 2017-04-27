@@ -1,15 +1,10 @@
 import React from 'react'
-const ReactMotion = require('./react-motion.js')
+const ReactMotion = require('../lib/react-motion.js')
+import '../style/Todo.css';
 var TransitionMotion = ReactMotion.TransitionMotion;
 var spring = ReactMotion.spring;
 var presets  = ReactMotion.presets;
-import './Todo.css';
 
-/*const Todo = () => (
-  <div>
-    <h2>Todo</h2>
-  </div>
-)*/
 
 const Todo = React.createClass({
   getInitialState() {
@@ -42,7 +37,7 @@ const Todo = React.createClass({
     const {todos, value} = this.state;
 
     let t = { ['t' + Date.now()]: {text: value},}
-    for(key in todos){
+    for(const key in todos){
       t[key]=todos[key]
     }
 
@@ -131,9 +126,9 @@ const Todo = React.createClass({
                   //debugger;
                   //console.log('config'+config)
                   const {data: {text}, height,opacity} = config;
-                  const style={height,opacity}
+                  //const style={height,opacity}
                   return (
-                    <li key={date} style={style}>
+                    <li key={date} style={{height,opacity}}>
                       <div className="view">
                         
                         <label>{text}</label>
